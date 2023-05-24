@@ -5,6 +5,7 @@ public class ObliczanieDelty
     static void Main(string[] args)
     {
         Console.WriteLine("Podaj współczynniki równania kwadratowego:");
+
         Console.Write("Podaj wartość a: ");
         double a = Convert.ToDouble(Console.ReadLine());
 
@@ -36,6 +37,7 @@ public class ObliczanieDelty
             double x = -b / (2 * a);
             return ($"Równanie kwadratowe ma jeden pierwiastek: x = {x}");
         }
+
         return ("Równanie kwadratowe nie ma pierwiastków rzeczywistych.");
         
     }

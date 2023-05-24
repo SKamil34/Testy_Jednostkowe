@@ -5,21 +5,18 @@ namespace TestProject1
 {
     public class UnitTest1
     {
-        private readonly ObliczanieDelty _program;
-        public UnitTest1()
-        {
-            _program = new ObliczanieDelty();
-        }
         [Fact]
         public void ObliczDelte_Poprawnie_Zwraca_2_pierwiastki()
         {
-            // arrange
+            //arrange
             double delta = 64;
             double a = 4;
             double b = 8;
-            // act
+
+            //act
             var Test1 = ObliczanieDelty.ObliczDelte(delta, a, b);
-            // assert
+
+            //assert
             Assert.NotNull(Test1);
             Assert.Equal("Pierwiastki równania kwadratowego to: x1 = 0, x2 = -2", Test1);
         }
@@ -45,7 +42,7 @@ namespace TestProject1
         }
         [Theory]
         [InlineData(0,1,4)]
-        public void Zwraca_2(double delta, double a, double b) 
+        public void Zwraca_Teorie(double delta, double a, double b) 
         {
             var Test4 = ObliczanieDelty.ObliczDelte(delta, a, b);
             Assert.NotNull(Test4);
